@@ -2,6 +2,7 @@ import React from 'react';
 import Search from './components/Search';
 import ViewBuilding from './components/ViewBuilding';
 import BuildingList from './components/BuildingList';
+import AddBuilding from './components/AddBuilding';
 import Credit from './components/Credit';
 
 class App extends React.Component {
@@ -30,17 +31,24 @@ class App extends React.Component {
 
   deleteBuilding(id) {
     console.log(id);
+
     const newData = this.state.data.filter(directory => {
       return directory.id != id
     })
+
     this.setState({
       data: newData,
     });
+
     if (this.state.selectedBuilding === id){
       this.setState({
         selectedBuilding: 0
       })
     }
+  }
+
+  addBuilding() {
+
   }
 
   render() {
@@ -81,6 +89,10 @@ class App extends React.Component {
                 selectedBuilding={this.state.selectedBuilding}
                 data={this.state.data}
               />
+              <div>
+                <i>Add Building to Directory:</i>
+                <AddBuilding/>
+              </div>
             </div>
           </div>
           <Credit />
