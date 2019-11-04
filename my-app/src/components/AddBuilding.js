@@ -18,6 +18,13 @@ class AddBuilding extends React.Component {
     console.log(newBuilding);
     const newData = this.props.data.concat(newBuilding);
     console.log(newData);
+
+    this.refs.name.value = '';
+    this.refs.code.value = '';
+    this.refs.address.value = '';
+    this.refs.latitude.value = '';
+    this.refs.longitude.value = '';
+
     this.props.addBuilding(newData);
   }
 
