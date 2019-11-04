@@ -9,8 +9,8 @@ class App extends React.Component {
     super(props);
     this.state = {
       filterText: '',
-      selectedBuilding: 0
-
+      selectedBuilding: 0,
+      data: this.props.data
     };
   }
 
@@ -28,10 +28,20 @@ class App extends React.Component {
     });
   }
 
-  /*deleteBuilding(id) {
-
-    this.setState({});
-  }*/
+  deleteBuilding(id) {
+    console.log(id);
+    const newData = this.state.data.filter(directory => {
+      return directory.id != id
+    })
+    this.setState({
+      data: newData,
+    });
+    if (this.state.selectedBuilding === id){
+      this.setState({
+        selectedBuilding: 0
+      })
+    }
+  }
 
   render() {
 
@@ -57,9 +67,10 @@ class App extends React.Component {
                       </td>
                     </tr>
                     <BuildingList
-                      data={this.props.data}
+                      data={this.state.data}
                       filterText={this.state.filterText}
                       selectedUpdate={this.selectedUpdate.bind(this)}
+                      deleteBuilding={this.deleteBuilding.bind(this)}
                     />
                   </tbody>
                 </table>
@@ -68,7 +79,7 @@ class App extends React.Component {
             <div className="column2">
               <ViewBuilding
                 selectedBuilding={this.state.selectedBuilding}
-                data={this.props.data}
+                data={this.state.data}
               />
             </div>
           </div>

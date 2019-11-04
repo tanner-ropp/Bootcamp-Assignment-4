@@ -1,4 +1,5 @@
 import React from 'react';
+import RemoveBuilding from './RemoveBuilding.js'
 
 // This could also be a stateless function (see tutorial)
 class BuilingList extends React.Component {
@@ -12,13 +13,13 @@ class BuilingList extends React.Component {
 			})
 			.map(directory => {
 				return (
-					<tr
-						key={directory.id}
-						onClick={() => this.props.selectedUpdate(directory.id)}
-					>
-						<td> {directory.code} </td>
-						<td> {directory.name} </td>
-					</tr>
+					<div>
+						<tr key={directory.id}>
+							<td onClick={() => this.props.selectedUpdate(directory.id)}> {directory.code} </td>
+							<td onClick={() => this.props.selectedUpdate(directory.id)}> {directory.name} </td>
+							<RemoveBuilding deleteBuilding={this.props.deleteBuilding} selectedBuilding={directory.id}/>
+						</tr>
+					</div>
 				);
 			});
 
