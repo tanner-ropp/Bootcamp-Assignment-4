@@ -13,13 +13,13 @@ class BuildingList extends React.Component {
 			})
 			.map(directory => {
 				return (
-					<div>
-						<tr key={directory.id}>
-							<td onClick={() => this.props.selectedUpdate(directory.id)}> {directory.code} </td>
-							<td onClick={() => this.props.selectedUpdate(directory.id)}> {directory.name} </td>
+					<tr key={directory.id}>
+						<td onClick={() => this.props.selectedUpdate(directory.id)}> {directory.code} </td>
+						<td onClick={() => this.props.selectedUpdate(directory.id)}> {directory.name} </td>
+						<td>
 							<RemoveBuilding deleteBuilding={this.props.deleteBuilding} selectedBuilding={directory.id} data={data}/>
-						</tr>
-					</div>
+						</td> 
+					</tr>
 				);
 			});
 
