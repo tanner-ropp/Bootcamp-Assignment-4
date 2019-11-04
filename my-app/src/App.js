@@ -29,13 +29,7 @@ class App extends React.Component {
     });
   }
 
-  deleteBuilding(id) {
-    console.log(id);
-
-    const newData = this.state.data.filter(directory => {
-      return directory.id != id
-    })
-
+  deleteBuilding(newData,id) {
     this.setState({
       data: newData,
     });
@@ -47,7 +41,7 @@ class App extends React.Component {
     }
   }
 
-  addBuilding() {
+  addBuilding(newData) {
 
   }
 
