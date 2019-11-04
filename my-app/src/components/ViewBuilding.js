@@ -3,6 +3,12 @@ import React from 'react';
 class ViewBuilding extends React.Component {
 	render() {
 		const {selectedBuilding, data} = this.props;
+
+		const selectedDirectory = data
+			.filter(directory => {
+				return directory.id == selectedBuilding
+			})
+
 		const buildingSelected = (selectedBuilding > 0);
 		return (
 			<div>
@@ -13,22 +19,22 @@ class ViewBuilding extends React.Component {
 						<div>
 							<li>
 								<i>Name: </i>
-								{data[selectedBuilding-1].name}
+								{selectedDirectory[0].name}
 							</li>
 							<li>
 								<i>Code: </i>
-								{data[selectedBuilding-1].code}
+								{selectedDirectory[0].code}
 							</li>
-							{data[selectedBuilding-1].address && (
+							{selectedDirectory[0].address && (
 								<li>
 									<i>Address: </i>
-									{data[selectedBuilding-1].address}
+									{selectedDirectory[0].address}
 								</li>
 							)}
-							{data[selectedBuilding-1].coordinates && (
+							{selectedDirectory[0].coordinates && (
 								<li>
 									<i>Coordinates: </i>
-									{data[selectedBuilding-1].coordinates.latitude + ', ' + data[selectedBuilding-1].coordinates.longitude}
+									{selectedDirectory[0].coordinates.latitude + ', ' + selectedDirectory[0].coordinates.longitude}
 								</li>
 							)}
 						</div>

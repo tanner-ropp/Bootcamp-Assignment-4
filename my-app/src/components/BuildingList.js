@@ -16,7 +16,7 @@ class BuilingList extends React.Component {
 						key={directory.id}
 						onClick={() => this.props.selectedUpdate(directory.id)}
 					>
-						<td>{directory.code} </td>
+						<td> {directory.code} </td>
 						<td> {directory.name} </td>
 					</tr>
 				);

@@ -10,6 +10,7 @@ class App extends React.Component {
     this.state = {
       filterText: '',
       selectedBuilding: 0
+
     };
   }
 
@@ -26,6 +27,11 @@ class App extends React.Component {
       selectedBuilding: id
     });
   }
+
+  /*deleteBuilding(id) {
+
+    this.setState({});
+  }*/
 
   render() {
 
