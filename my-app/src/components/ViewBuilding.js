@@ -6,7 +6,7 @@ class ViewBuilding extends React.Component {
 
 		const selectedDirectory = data
 			.filter(directory => {
-				return directory.id == selectedBuilding
+				return directory.id === selectedBuilding
 			})
 
 		const buildingSelected = (selectedBuilding > 0);
@@ -16,7 +16,7 @@ class ViewBuilding extends React.Component {
 					{' '}
 					{!buildingSelected && <i>Click on a name to view more information</i>}
 					{buildingSelected && (
-						<div>
+						<p>
 							<li>
 								<i>Name: </i>
 								{selectedDirectory[0].name}
@@ -37,7 +37,7 @@ class ViewBuilding extends React.Component {
 									{selectedDirectory[0].coordinates.latitude + ', ' + selectedDirectory[0].coordinates.longitude}
 								</li>
 							)}
-						</div>
+						</p>
 					)}
 				</p>
 			</div>

@@ -31,7 +31,7 @@ class App extends React.Component {
 
   deleteBuilding(newData,id) {
     this.setState({
-      data: newData,
+      data: newData
     });
 
     if (this.state.selectedBuilding === id){
@@ -42,7 +42,9 @@ class App extends React.Component {
   }
 
   addBuilding(newData) {
-
+    this.setState({
+      data: newData
+    })
   }
 
   render() {
@@ -85,7 +87,7 @@ class App extends React.Component {
               />
               <div>
                 <i>Add Building to Directory:</i>
-                <AddBuilding/>
+                <AddBuilding addBuilding={this.addBuilding.bind(this)} data={this.state.data}/>
               </div>
             </div>
           </div>

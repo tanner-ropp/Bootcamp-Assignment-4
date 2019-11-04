@@ -7,7 +7,7 @@ class RemoveBuilding extends React.Component {
     console.log(id);
 
     const newData = this.props.data.filter(directory => {
-      return directory.id != id
+      return directory.id !== id
     })
 
     this.props.deleteBuilding(newData, id);
