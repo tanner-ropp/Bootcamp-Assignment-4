@@ -58,6 +58,7 @@ class AddBuilding extends React.Component {
 				/>
         <button
           type="button"
+          className="btn btn-success"
           onClick={() => this.addBuilding()}
         >
           ADD

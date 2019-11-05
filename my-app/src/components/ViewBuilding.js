@@ -13,6 +13,8 @@ class ViewBuilding extends React.Component {
 		return (
 			<div>
 				<p>
+					<b>Building Information:</b>
+					<br/>
 					{' '}
 					{!buildingSelected && <i>Click on a name to view more information</i>}
 					{buildingSelected && (

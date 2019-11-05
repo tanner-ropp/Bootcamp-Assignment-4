@@ -51,7 +51,7 @@ class App extends React.Component {
 
     return (
       <div className="bg">
-        <div className="row">
+        <div className="row p-3 mb-2 bg-primary text-white">
           <h1>UF Directory App</h1>
         </div>
 
@@ -64,12 +64,12 @@ class App extends React.Component {
             <div className="column1">
               <div className="tableWrapper">
                 <table className="table table-striped table-hover">
-                  <tbody>
+                  <thead>
                     <tr>
-                      <td>
-                        <b>Code Building</b>
-                      </td>
+                      <th scope="col">Code &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Building </th>
                     </tr>
+                  </thead>
+                  <tbody>
                     <BuildingList
                       data={this.state.data}
                       filterText={this.state.filterText}
@@ -86,7 +86,7 @@ class App extends React.Component {
                 data={this.state.data}
               />
               <div>
-                <i>Add Building to Directory:</i>
+                <b>Add Building to Directory:</b>
                 <AddBuilding addBuilding={this.addBuilding.bind(this)} data={this.state.data}/>
               </div>
             </div>

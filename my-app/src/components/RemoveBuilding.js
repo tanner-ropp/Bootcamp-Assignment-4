@@ -17,9 +17,10 @@ class RemoveBuilding extends React.Component {
     return(
       <button
         type="button"
+        className="btn btn-outline-danger btn-sm"
         onClick={() => this.deleteBuilding()}
       >
-        DELETE
+        Delete
       </button>
   )}
 }

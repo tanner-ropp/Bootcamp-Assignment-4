@@ -18,7 +18,7 @@ class BuildingList extends React.Component {
 						<td onClick={() => this.props.selectedUpdate(directory.id)}> {directory.name} </td>
 						<td>
 							<RemoveBuilding deleteBuilding={this.props.deleteBuilding} selectedBuilding={directory.id} data={data}/>
-						</td> 
+						</td>
 					</tr>
 				);
 			});
