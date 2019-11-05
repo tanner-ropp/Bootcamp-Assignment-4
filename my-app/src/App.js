@@ -65,18 +65,17 @@ class App extends React.Component {
               <div className="tableWrapper">
                 <table className="table table-striped table-hover">
                   <thead>
-                    <tr>
-                      <th scope="col">Code &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Building </th>
+                    <tr className="fixedHeader">
+                      <th scope="col">Code</th>
+                      <th scope="col" colspan="2">Building</th>
                     </tr>
                   </thead>
-                  <tbody>
-                    <BuildingList
-                      data={this.state.data}
-                      filterText={this.state.filterText}
-                      selectedUpdate={this.selectedUpdate.bind(this)}
-                      deleteBuilding={this.deleteBuilding.bind(this)}
-                    />
-                  </tbody>
+                  <BuildingList
+                    data={this.state.data}
+                    filterText={this.state.filterText}
+                    selectedUpdate={this.selectedUpdate.bind(this)}
+                    deleteBuilding={this.deleteBuilding.bind(this)}
+                  />
                 </table>
               </div>
             </div>

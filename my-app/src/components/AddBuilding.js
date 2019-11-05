@@ -59,7 +59,7 @@ class AddBuilding extends React.Component {
         <button
           type="button"
           className="btn btn-success"
-          onClick={() => this.addBuilding()}
+          onClick={() => {if (this.refs.name.value !== '') this.addBuilding()}}
         >
           ADD
         </button>

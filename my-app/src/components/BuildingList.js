@@ -23,7 +23,7 @@ class BuildingList extends React.Component {
 				);
 			});
 
-		return <div>{buildingList}</div>;
+		return <tbody>{buildingList}</tbody>;
 	}
 }
 export default BuildingList;

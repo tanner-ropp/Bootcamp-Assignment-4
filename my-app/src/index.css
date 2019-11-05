@@ -47,6 +47,7 @@ td:hover {
 	background-color: #ddd;
 }
 
+
 /* ##### Columns ##### */
 .column1 {
 	float: left;
@@ -77,6 +78,8 @@ td:hover {
 	overflow: auto;
 	scroll-behavior: smooth;
 }
+
+
 
 /* ##### Footer ##### */
 .credit {
