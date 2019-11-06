@@ -11,8 +11,8 @@ class ViewBuilding extends React.Component {
 
 		const buildingSelected = (selectedBuilding > 0);
 		return (
-			<div>
-				<p>
+			<div >
+				<p className="buildingCard">
 					<b>Building Information:</b>
 					<br/>
 					{' '}

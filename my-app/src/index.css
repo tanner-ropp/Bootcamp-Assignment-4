@@ -14,7 +14,7 @@ main {
 
 /* ##### Search ##### */
 header {
-	background: #3498db;
+	background: blue;
 	margin-bottom: 2rem;
 }
 
@@ -102,4 +102,9 @@ button {
 }
 button:hover {
 	background: #ddd;
+}
+
+.buildingCard {
+	border: solid 3px;
+	padding: 20px;
 }

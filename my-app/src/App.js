@@ -84,7 +84,7 @@ class App extends React.Component {
                 selectedBuilding={this.state.selectedBuilding}
                 data={this.state.data}
               />
-              <div>
+              <div className="buildingCard">
                 <b>Add Building to Directory:</b>
                 <AddBuilding addBuilding={this.addBuilding.bind(this)} data={this.state.data}/>
               </div>
